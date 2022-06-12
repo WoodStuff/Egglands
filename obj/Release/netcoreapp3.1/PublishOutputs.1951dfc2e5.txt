@@ -1,0 +1,5 @@
+C:\Users\woods\Downloads\egglands but unplayable\Egglands.exe
+C:\Users\woods\Downloads\egglands but unplayable\Egglands.dll
+C:\Users\woods\Downloads\egglands but unplayable\Egglands.deps.json
+C:\Users\woods\Downloads\egglands but unplayable\Egglands.runtimeconfig.json
+C:\Users\woods\Downloads\egglands but unplayable\Egglands.pdb

@@ -1,0 +1,14 @@
+C:\Users\woods\source\repos\Egglands\Egglands\bin\Debug\netcoreapp3.1\Egglands.exe
+C:\Users\woods\source\repos\Egglands\Egglands\bin\Debug\netcoreapp3.1\Egglands.deps.json
+C:\Users\woods\source\repos\Egglands\Egglands\bin\Debug\netcoreapp3.1\Egglands.runtimeconfig.json
+C:\Users\woods\source\repos\Egglands\Egglands\bin\Debug\netcoreapp3.1\Egglands.runtimeconfig.dev.json
+C:\Users\woods\source\repos\Egglands\Egglands\bin\Debug\netcoreapp3.1\Egglands.dll
+C:\Users\woods\source\repos\Egglands\Egglands\bin\Debug\netcoreapp3.1\Egglands.pdb
+C:\Users\woods\source\repos\Egglands\Egglands\obj\Debug\netcoreapp3.1\Egglands.AssemblyInfoInputs.cache
+C:\Users\woods\source\repos\Egglands\Egglands\obj\Debug\netcoreapp3.1\Egglands.AssemblyInfo.cs
+C:\Users\woods\source\repos\Egglands\Egglands\obj\Debug\netcoreapp3.1\Egglands.csproj.CoreCompileInputs.cache
+C:\Users\woods\source\repos\Egglands\Egglands\obj\Debug\netcoreapp3.1\Egglands.dll
+C:\Users\woods\source\repos\Egglands\Egglands\obj\Debug\netcoreapp3.1\Egglands.pdb
+C:\Users\woods\source\repos\Egglands\Egglands\obj\Debug\netcoreapp3.1\Egglands.genruntimeconfig.cache
+C:\Users\woods\source\repos\Egglands\Egglands\obj\Debug\netcoreapp3.1\Egglands.csproj.AssemblyReference.cache
+C:\Users\woods\source\repos\Egglands\Egglands\obj\Debug\netcoreapp3.1\Egglands.GeneratedMSBuildEditorConfig.editorconfig
