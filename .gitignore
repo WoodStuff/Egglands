@@ -54,3 +54,5 @@ dkms.conf
 
 # among us
 Properties
+bin
+obj
