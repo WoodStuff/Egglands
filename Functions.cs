@@ -31,7 +31,7 @@ namespace Functions
 		public static void RenderUI()
 		{
 			Console.WriteLine(Program.player.Name);
-			Console.WriteLine($"{Program.player.X},{Program.player.Y}: {BiomeManager.GetBiomeName(BiomeManager.GetBiomeFromPos(Program.player.X, Program.player.Y))}");
+			Console.WriteLine($"{Program.player.X},{Program.player.Y}: {TerrainManager.GetTerrainName(TerrainManager.GetTerrainFromPos(Program.player.X, Program.player.Y))}");
 			Console.WriteLine($"{Program.player.Coins}C");
 		}
 		public static void AwaitMovement(Player player, char[] inputs = null)

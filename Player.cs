@@ -2,6 +2,10 @@
 {
 	public class Player
 	{
+		public string Name;
+		public ulong Coins;
+		public int X;
+		public int Y;
 		public Player(string name)
 		{
 			Name = name;
@@ -25,9 +29,5 @@
 			Coins = val;
 			return Coins;
 		}
-		public string Name;
-		public ulong Coins;
-		public long X;
-		public long Y;
 	}
 }

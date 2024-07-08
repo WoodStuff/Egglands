@@ -66,7 +66,7 @@ namespace Egglands
 			Console.Clear();
 
 			FGame.RenderUI();
-			Console.WriteLine(string.Join("\n", BiomeManager.GetAppearance(BiomeManager.GetBiomeFromPos(player.X, player.Y))));
+			Console.WriteLine(string.Join("\n", TerrainManager.GetAppearance(TerrainManager.GetTerrainFromPos(player.X, player.Y))));
 
 			FGame.AwaitMovement(player);
 

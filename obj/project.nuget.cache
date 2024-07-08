@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ZxX262FOyFqalM3Ol+H/AzTna8brDSxhnm75z1W4OUCIVFMhJ3WwhR2yJllqERaWlbevpBjAVOwwQKdlx3ZQrQ==",
+  "dgSpecHash": "lX3xsdgO+2dAbUQ2v3NxfciEeHQRTPLBJwdomMwNUgqjraY82qGktK2zVsibJshdQEPAgebu5vRGuiAEG80aOw==",
   "success": true,
   "projectFilePath": "C:\\Users\\woods\\source\\repos\\Egglands\\Egglands\\Egglands.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\woods\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
+    "C:\\Users\\woods\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.27\\microsoft.netcore.app.host.win-x64.3.1.27.nupkg.sha512"
   ],
   "logs": []
 }
