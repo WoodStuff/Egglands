@@ -1,10 +1,23 @@
 ﻿namespace Egglands;
 
-internal class Program
+internal static class Program
 {
-	static void Main()
+	/// <summary>
+	/// Entry point.
+	/// </summary>
+	public static void Main()
 	{
 		Console.CursorVisible = false;
+
+		Menu();
+	}
+
+	/// <summary>
+	/// Triggers the main menu.
+	/// </summary>
+	private static void Menu()
+	{
+		Console.Clear();
 
 		Console.WriteLine("====================");
 		Console.WriteLine("      EGGLANDS      ");
