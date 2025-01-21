@@ -1,11 +1,7 @@
 ﻿namespace Egglands;
 
-public class Player
+public class Player : Entity
 {
-	public double Attack { get; set; }
-	public double MaxHP { get; set; }
-	public double HP { get; set; }
-
 	public Player(double attack, double health)
 	{
 		Attack = attack;

@@ -21,20 +21,19 @@ public static class Game
 		var option = Control.Options(["Fight Enemy", "Exit"]);
 		if (option == 1) Environment.Exit(0);
 
-		FightEnemy();
+		FightEnemy(new(2, 20));
 	}
 
-	public static void FightEnemy()
+	public static void FightEnemy(Enemy enemy)
 	{
-		Enemy enemy = new(2, 20);
 		RenderUI();
 
 		do
 		{
 			Control.Options(["Attack"]);
 
-			Player.HP -= enemy.Attack;
-			enemy.HP -= Player.Attack;
+			Player.Damage(enemy.Attack);
+			enemy.Damage(Player.Attack);
 
 			RenderUI();
 		} while (Player.HP > 0 && enemy.HP > 0);
