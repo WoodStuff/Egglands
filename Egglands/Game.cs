@@ -46,16 +46,11 @@ public static class Game
 		void RenderUI()
 		{
 			Console.Clear();
-			
-			Console.WriteLine("PLAYER");
-			Console.WriteLine($"{Player.HP}/{Player.MaxHP} HP");
-			Console.WriteLine($"{Player.Attack} ATK");
-			Console.WriteLine("");
 
-			Console.WriteLine(enemy.Name);
-			Console.WriteLine($"{enemy.HP}/{enemy.MaxHP} HP");
-			Console.WriteLine($"{enemy.Attack} ATK");
-			Console.WriteLine("");
+			Console.WriteLine(Player);
+			Console.WriteLine();
+			Console.WriteLine(enemy);
+			Console.WriteLine();
 		}
 	}
 }

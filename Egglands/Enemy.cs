@@ -11,4 +11,11 @@ public class Enemy : Entity
 		MaxHP = health;
 		HP = health;
 	}
+
+	public override string ToString()
+	{
+		return $@"{Name}
+{HP}/{MaxHP} HP
+{Attack} ATK";
+	}
 }
