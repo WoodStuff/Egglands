@@ -1,4 +1,6 @@
-﻿namespace Egglands;
+﻿using Egglands.Lists;
+
+namespace Egglands;
 
 public static class Game
 {
@@ -18,10 +20,10 @@ public static class Game
 
 		await Task.Delay(500);
 
-		var option = Control.Options(["Fight Enemy", "Exit"]);
+		var option = Control.Options(["Fight Zombie", "Exit"]);
 		if (option == 1) Environment.Exit(0);
 
-		FightEnemy(new(2, 20));
+		FightEnemy(Enemies.Zombie);
 	}
 
 	public static void FightEnemy(Enemy enemy)
@@ -50,7 +52,7 @@ public static class Game
 			Console.WriteLine($"{Player.Attack} ATK");
 			Console.WriteLine("");
 
-			Console.WriteLine("ENEMY");
+			Console.WriteLine(enemy.Name);
 			Console.WriteLine($"{enemy.HP}/{enemy.MaxHP} HP");
 			Console.WriteLine($"{enemy.Attack} ATK");
 			Console.WriteLine("");

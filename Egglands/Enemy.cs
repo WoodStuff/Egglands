@@ -2,8 +2,11 @@
 
 public class Enemy : Entity
 {
-	public Enemy(double attack, double health)
+	public string Name { get; init; }
+
+	public Enemy(string name, double attack, double health)
 	{
+		Name = name;
 		Attack = attack;
 		MaxHP = health;
 		HP = health;
