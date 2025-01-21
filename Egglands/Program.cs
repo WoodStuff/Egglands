@@ -5,10 +5,10 @@ internal static class Program
 	/// <summary>
 	/// Entry point.
 	/// </summary>
-	public static void Main()
+	public static async Task Main()
 	{
 		Console.CursorVisible = false;
 
-		Game.Menu();
+		await Game.Menu();
 	}
 }
