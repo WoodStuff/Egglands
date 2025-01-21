@@ -38,7 +38,7 @@ public static class Game
 			enemy.Damage(Player.Attack);
 
 			RenderUI();
-		} while (Player.HP > 0 && enemy.HP > 0);
+		} while (Player.Alive && enemy.Alive);
 
 		if (Player.HP > 0) Console.WriteLine("Player has won!");
 		else Console.WriteLine("Enemy has won!");
