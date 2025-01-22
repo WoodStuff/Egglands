@@ -23,34 +23,6 @@ public static class Game
 		var option = Control.Options(["Fight Zombie", "Exit"]);
 		if (option == 1) Environment.Exit(0);
 
-		FightEnemy(Enemies.Zombie);
-	}
-
-	public static void FightEnemy(Enemy enemy)
-	{
-		RenderUI();
-
-		do
-		{
-			Control.Options(["Attack"]);
-
-			Player.Damage(enemy.Attack);
-			enemy.Damage(Player.Attack);
-
-			RenderUI();
-		} while (Player.Alive && enemy.Alive);
-
-		if (Player.HP > 0) Console.WriteLine("Player has won!");
-		else Console.WriteLine("Enemy has won!");
-
-		void RenderUI()
-		{
-			Console.Clear();
-
-			Console.WriteLine(Player);
-			Console.WriteLine();
-			Console.WriteLine(enemy);
-			Console.WriteLine();
-		}
+		Battle.Start(Enemies.Zombie);
 	}
 }
