@@ -2,5 +2,5 @@
 
 public static class Enemies
 {
-	public static readonly Enemy Zombie = new("ZOMBIE", 2, 20);
+	public static readonly Enemy Zombie = new("Zombie", 2, 20);
 }

@@ -8,7 +8,7 @@ public class Player : Entity
 	/// <summary>
 	/// The player's class, which affects the player's traits and moves.
 	/// </summary>
-	public Class Class { get; init; }
+	public Class Class { get; set; }
 
 	public Player(double attack, double health)
 	{
@@ -20,7 +20,7 @@ public class Player : Entity
 
 	public override string ToString()
 	{
-		return $@"PLAYER
+		return $@"{Class.ToString().ToUpper()}
 {HP}/{MaxHP} HP
 {Attack} ATK";
 	}

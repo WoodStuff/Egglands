@@ -20,7 +20,7 @@ public class Enemy : Entity
 
 	public override string ToString()
 	{
-		return $@"{Name}
+		return $@"{Name.ToUpper()}
 {HP}/{MaxHP} HP
 {Attack} ATK";
 	}
