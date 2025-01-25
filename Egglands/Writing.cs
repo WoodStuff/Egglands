@@ -1,5 +1,8 @@
 ﻿namespace Egglands;
 
+/// <summary>
+/// Contains helper methods for writing to the console.
+/// </summary>
 internal static class Writing
 {
 	public static void Write(object? obj) => Console.WriteLine(obj);
@@ -8,7 +11,7 @@ internal static class Writing
 		ConsoleColor oldColor = Console.ForegroundColor;
 		Console.ForegroundColor = color;
 
-		Console.WriteLine(obj);
+		Write(obj);
 
 		Console.ForegroundColor = oldColor;
 	}
@@ -17,7 +20,7 @@ internal static class Writing
 		(int x, int y) = Console.GetCursorPosition();
 		Console.SetCursorPosition(position.x, position.y);
 
-		Console.WriteLine(obj);
+		Write(obj);
 
 		Console.SetCursorPosition(x, y);
 	}
@@ -29,7 +32,7 @@ internal static class Writing
 		(int x, int y) = Console.GetCursorPosition();
 		Console.SetCursorPosition(position.x, position.y);
 
-		Console.WriteLine(obj);
+		Write(obj);
 
 		Console.SetCursorPosition(x, y);
 

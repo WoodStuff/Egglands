@@ -1,13 +1,13 @@
 ﻿namespace Egglands;
 
-public enum Class
-{
-	Unspecified,
-	Warrior,
-}
-
+/// <summary>
+/// Represents the player character.
+/// </summary>
 public class Player : Entity
 {
+	/// <summary>
+	/// The player's class, which affects the player's traits and moves.
+	/// </summary>
 	public Class Class { get; init; }
 
 	public Player(double attack, double health)
@@ -24,4 +24,13 @@ public class Player : Entity
 {HP}/{MaxHP} HP
 {Attack} ATK";
 	}
+}
+
+/// <summary>
+/// The possible classes the player character can choose from.
+/// </summary>
+public enum Class
+{
+	Unspecified,
+	Warrior,
 }

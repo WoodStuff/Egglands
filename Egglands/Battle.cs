@@ -1,9 +1,19 @@
 ﻿namespace Egglands;
 
+/// <summary>
+/// Logic for enemy battles.
+/// </summary>
 public static class Battle
 {
+	/// <summary>
+	/// Reference to the game player.
+	/// </summary>
 	private static Player Player => Game.Player;
 
+	/// <summary>
+	/// Starts a battle with an enemy.
+	/// </summary>
+	/// <param name="enemy">The enemy to battle with.</param>
 	public static void Start(Enemy enemy)
 	{
 		RenderUI();
@@ -32,6 +42,10 @@ public static class Battle
 		}
 	}
 
+	/// <summary>
+	/// Ends a battle.
+	/// </summary>
+	/// <param name="result">How the battle should end.</param>
 	private static void End(BattleResult result)
 	{
 		switch (result)
@@ -48,7 +62,10 @@ public static class Battle
 	}
 }
 
-enum BattleResult
+/// <summary>
+/// The possible outcomes of a battle.
+/// </summary>
+public enum BattleResult
 {
 	Win,
 	Loss,

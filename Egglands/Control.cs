@@ -8,6 +8,9 @@ internal static class Control
 	private const ConsoleColor UNSELECTED_OPTION = ConsoleColor.White;
 	private const ConsoleColor SELECTED_OPTION = ConsoleColor.Blue;
 
+	/// <summary>
+	/// The keys that confirm a choice in <see cref="Options(string[])"/>.
+	/// </summary>
 	private static readonly ConsoleKey[] OptionConfirmKeys = [ConsoleKey.Enter, ConsoleKey.Spacebar];
 
 	/// <summary>

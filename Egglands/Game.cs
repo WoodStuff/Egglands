@@ -2,10 +2,16 @@
 
 namespace Egglands;
 
+/// <summary>
+/// Most of the game logic is stored here.
+/// </summary>
 public static class Game
 {
+	/// <summary>
+	/// The player character.
+	/// </summary>
 	public static Player Player { get; } = new(5, 50);
-
+	
 	/// <summary>
 	/// Triggers the main menu.
 	/// </summary>
