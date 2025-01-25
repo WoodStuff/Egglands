@@ -8,14 +8,34 @@ public class Player : Entity
 	/// <summary>
 	/// The player's class, which affects the player's traits and moves.
 	/// </summary>
-	public Class Class { get; set; }
+	public Class Class { get; private set; }
 
-	public Player(double attack, double health)
+	public Player()
 	{
-		Attack = attack;
-		MaxHP = health;
-		HP = health;
 		Class = Class.Unspecified;
+	}
+
+	public void InitializePlayerStats(Class c)
+	{
+		Class = c;
+
+		switch (Class)
+		{
+			case Class.Warrior:
+				Attack = 4;
+				HP = 20;
+				break;
+
+			case Class.Mage:
+				Attack = 3;
+				HP = 15;
+				break;
+
+			default:
+				break;
+		}
+
+		MaxHP = HP;
 	}
 
 	public override string ToString()
@@ -33,4 +53,5 @@ public enum Class
 {
 	Unspecified,
 	Warrior,
+	Mage,
 }
