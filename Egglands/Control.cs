@@ -18,9 +18,9 @@ internal static class Control
 	/// </summary>
 	/// <param name="keys">The acceptable keys.</param>
 	/// <returns>The pressed input.</returns>
-	public static ConsoleKeyInfo Wait(ConsoleKey[] keys)
+	public static ConsoleKeyInfo Wait(ICollection<ConsoleKey> keys)
 	{
-		if (keys.Length == 0) throw new ArgumentException("Key list cannot be empty.");
+		if (keys.Count == 0) throw new ArgumentException("Key list cannot be empty.");
 
 		ConsoleKeyInfo input;
 
@@ -37,18 +37,19 @@ internal static class Control
 	/// Enforces a choice by writing out some options and allowing the user to pick one using arrow keys and enter.
 	/// </summary>
 	/// <param name="options">The selectable options.</param>
+	/// <param name="startAt">The option to start at.</param>
 	/// <returns>The index of the option that was selected.</returns>
-	public static int Options(string[] options)
+	public static int Options(ICollection<string> options, int startAt = 0)
 	{
-		if (options.Length == 0) throw new ArgumentException("Option list cannot be empty.");
+		if (options.Count == 0) throw new ArgumentException("Option list cannot be empty.");
 
 		int start = Console.CursorTop; // position of the option list
-		int selected = 0; // currently selected option id
+		int selected = startAt; // currently selected option id
 
 		foreach (string option in options)
 		{
-			bool first = option == options[0];
-			Writing.Write(option, first ? SELECTED_OPTION : UNSELECTED_OPTION);
+			bool initSelected = option == options.ElementAt(startAt);
+			Writing.Write(option, initSelected ? SELECTED_OPTION : UNSELECTED_OPTION);
 		}
 
 		ConsoleKeyInfo input;
@@ -59,21 +60,21 @@ internal static class Control
 			input = Wait([..OptionConfirmKeys, ConsoleKey.UpArrow, ConsoleKey.DownArrow]);
 
 			if (!OptionConfirmKeys.Contains(input.Key))
-				Writing.Write(options[selected], UNSELECTED_OPTION, (0, start + selected));
+				Writing.Write(options.ElementAt(selected), UNSELECTED_OPTION, (0, start + selected));
 
 			if (input.Key == ConsoleKey.UpArrow) // move selected option up
 			{
 				selected--;
-				if (selected < 0) selected = options.Length - 1; // wrapping
+				if (selected < 0) selected = options.Count - 1; // wrapping
 			}
 			if (input.Key == ConsoleKey.DownArrow) // move selected option down
 			{
 				selected++;
-				if (selected > options.Length - 1) selected = 0; // wrapping
+				if (selected > options.Count - 1) selected = 0; // wrapping
 			}
 
 			if (!OptionConfirmKeys.Contains(input.Key))
-				Writing.Write(options[selected], SELECTED_OPTION, (0, start + selected));
+				Writing.Write(options.ElementAt(selected), SELECTED_OPTION, (0, start + selected));
 		} while (!OptionConfirmKeys.Contains(input.Key));
 
 		return selected;
