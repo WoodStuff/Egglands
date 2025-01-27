@@ -16,6 +16,9 @@ public class Player : Entity
 	/// </summary>
 	public List<Move> Moves { get; }
 
+	/// <summary>
+	/// Creates a new instance of the <see cref="Player"/> class. To set the player up, use <see cref="InitializePlayerStats(Class)"/>.
+	/// </summary>
 	public Player()
 	{
 		Class = Class.Unspecified;
