@@ -11,11 +11,11 @@ public static class Game
 	/// The player character.
 	/// </summary>
 	public static Player Player { get; } = new();
-	
+
 	/// <summary>
 	/// Triggers the main menu.
 	/// </summary>
-	public static async Task Menu()
+	public static void Menu()
 	{
 		Console.Clear();
 
@@ -24,14 +24,12 @@ public static class Game
 		Console.WriteLine("====================");
 		Console.WriteLine("");
 
-		await Task.Delay(500);
-
 		var option = Control.Options(["Start Game", "Exit"]);
-		if (option == 1) Environment.Exit(0);
+		if (option == 1) Environment.Exit(0); // exit game
 
 		SelectClass();
 		if (Player.Class == Class.Unspecified)
-			throw new InvalidOperationException("Player hasn't been initialized.");
+			throw new InvalidOperationException("An error happened while selecting a class.");
 
 		Battle.Start(Enemy.Index.Zombie);
 	}
@@ -50,7 +48,7 @@ public static class Game
 		{
 			0 => Class.Warrior,
 			1 => Class.Mage,
-			_ => throw new ArgumentOutOfRangeException("option", "Invalid class picked")
+			_ => throw new ArgumentOutOfRangeException(nameof(option), "Invalid class picked.")
 		};
 
 		Player.InitializePlayerStats(c);

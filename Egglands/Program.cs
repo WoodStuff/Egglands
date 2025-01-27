@@ -8,13 +8,13 @@ internal static class Program
 	/// <summary>
 	/// Entry point.
 	/// </summary>
-	public static async Task Main()
+	public static void Main()
 	{
 		SetConsoleSettings();
 
-		await Game.Menu();
+		Game.Menu();
 	}
-	
+
 	/// <summary>
 	/// Sets some console settings.
 	/// </summary>
