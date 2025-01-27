@@ -1,10 +1,17 @@
-﻿namespace Egglands;
+﻿using Egglands.Lists;
+
+namespace Egglands;
 
 /// <summary>
 /// Represents an enemy.
 /// </summary>
 public class Enemy : Entity
 {
+	/// <summary>
+	/// The index containing every enemy in the game.
+	/// </summary>
+	public static EnemyFactory Index { get; } = new();
+
 	/// <summary>
 	/// The name of the enemy.
 	/// </summary>
