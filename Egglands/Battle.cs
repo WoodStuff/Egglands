@@ -18,12 +18,14 @@ public static class Battle
 	{
 		RenderUI();
 
+		int moveID = 0;
 		do
 		{
-			Control.Options(["Attack"]);
+			moveID = Control.Options(Player.GetMoveNames(), moveID); // keep selected move between turns
+			Move move = Player.Moves[moveID];
 
 			Player.Damage(enemy.Attack);
-			enemy.Damage(Player.Attack);
+			enemy.Damage(Player.Attack * move.Power); // moves with more power are more powerful
 
 			RenderUI();
 		} while (Player.Alive && enemy.Alive);

@@ -1,4 +1,6 @@
-﻿namespace Egglands;
+﻿using Egglands.Lists;
+
+namespace Egglands;
 
 /// <summary>
 /// Represents the player character.
@@ -9,26 +11,38 @@ public class Player : Entity
 	/// The player's class, which affects the player's traits and moves.
 	/// </summary>
 	public Class Class { get; private set; }
+	/// <summary>
+	/// The moves that the player can use in battle.
+	/// </summary>
+	public List<Move> Moves { get; }
 
 	public Player()
 	{
 		Class = Class.Unspecified;
+		Moves = [];
 	}
 
+	/// <summary>
+	/// Sets the player to the default stats depending on the selected class.
+	/// </summary>
+	/// <param name="c">The player's class.</param>
 	public void InitializePlayerStats(Class c)
 	{
 		Class = c;
+
+		Moves.Add(Move.Index.Attack); // default attack
+		Moves.Add(Move.Index.Strike); // slightly stronger attack
 
 		switch (Class)
 		{
 			case Class.Warrior:
 				Attack = 4;
-				HP = 20;
+				HP = 200;
 				break;
 
 			case Class.Mage:
 				Attack = 3;
-				HP = 15;
+				HP = 150;
 				break;
 
 			default:
@@ -37,6 +51,12 @@ public class Player : Entity
 
 		MaxHP = HP;
 	}
+
+	/// <summary>
+	/// Retrieves the display names of the player's moves.
+	/// </summary>
+	/// <returns>A list containing the display names in <see cref="Moves"/>.</returns>
+	public List<string> GetMoveNames() => Moves.Select(move => move.Name).ToList();
 
 	public override string ToString()
 	{

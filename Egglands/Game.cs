@@ -33,7 +33,7 @@ public static class Game
 		if (Player.Class == Class.Unspecified)
 			throw new InvalidOperationException("Player hasn't been initialized.");
 
-		Battle.Start(Enemies.Zombie);
+		Battle.Start(Enemy.Index.Zombie);
 	}
 
 	/// <summary>
