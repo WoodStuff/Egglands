@@ -6,5 +6,5 @@
 public class MoveFactory
 {
 	public readonly Move Attack = new("Attack", 1);
-	public readonly Move Strike = new("Strike", 2);
+	public readonly Move Fireball = new("Fireball", 2);
 }

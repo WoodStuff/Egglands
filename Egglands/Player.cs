@@ -34,7 +34,6 @@ public class Player : Entity
 		Class = c;
 
 		Moves.Add(Move.Index.Attack); // default attack
-		Moves.Add(Move.Index.Strike); // slightly stronger attack
 
 		switch (Class)
 		{
@@ -46,6 +45,7 @@ public class Player : Entity
 			case Class.Mage:
 				Attack = 3;
 				HP = 150;
+				Moves.Add(Move.Index.Fireball) ; // extra attack
 				break;
 
 			default:
