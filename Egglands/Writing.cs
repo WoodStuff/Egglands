@@ -17,24 +17,23 @@ internal static class Writing
 	}
 	public static void Write(object? obj, (int x, int y) position)
 	{
-		(int x, int y) = Console.GetCursorPosition();
-		Console.SetCursorPosition(position.x, position.y);
+		if (obj == null) return;
 
-		Write(obj);
+		string str = obj.ToString() ?? "";
+		string[] lines = str.Split('\n');
 
-		Console.SetCursorPosition(x, y);
+		for (int i = 0; i < lines.Length; i++)
+		{
+			Console.SetCursorPosition(position.x, position.y + i);
+			Write(lines[i]);
+		}
 	}
 	public static void Write(object? obj, ConsoleColor color, (int x, int y) position)
 	{
 		ConsoleColor oldColor = Console.ForegroundColor;
 		Console.ForegroundColor = color;
 
-		(int x, int y) = Console.GetCursorPosition();
-		Console.SetCursorPosition(position.x, position.y);
-
-		Write(obj);
-
-		Console.SetCursorPosition(x, y);
+		Write(obj, position);
 
 		Console.ForegroundColor = oldColor;
 	}

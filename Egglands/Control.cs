@@ -77,6 +77,8 @@ internal static class Control
 				Writing.Write(options.ElementAt(selected), SELECTED_OPTION, (0, start + selected));
 		} while (!OptionConfirmKeys.Contains(input.Key));
 
+		Console.SetCursorPosition(0, start + options.Count);
+
 		return selected;
 	}
 }
