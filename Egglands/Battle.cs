@@ -37,9 +37,8 @@ public static class Battle
 		{
 			Console.Clear();
 
-			Console.WriteLine(Player);
-			Console.WriteLine();
-			Console.WriteLine(enemy);
+			Writing.Write(Player);
+			Writing.Write(enemy, (20, 0));
 			Console.WriteLine();
 		}
 	}
