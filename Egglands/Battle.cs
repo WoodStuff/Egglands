@@ -60,6 +60,7 @@ public static class Battle
 			default:
 				break;
 		}
+		Console.ReadKey();
 	}
 }
 

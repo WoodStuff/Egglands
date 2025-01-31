@@ -45,7 +45,7 @@ public class Player : Entity
 			case Class.Mage:
 				Attack = 3;
 				HP = 150;
-				Moves.Add(Move.Index.Fireball) ; // extra attack
+				Moves.Add(Move.Index.Fireball); // extra attack
 				break;
 
 			default:

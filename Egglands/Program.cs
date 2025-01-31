@@ -21,5 +21,7 @@ internal static class Program
 	private static void SetConsoleSettings()
 	{
 		Console.CursorVisible = false;
+		Console.Title = "EGGLANDS";
+		Console.TreatControlCAsInput = true;
 	}
 }
