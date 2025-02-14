@@ -39,12 +39,12 @@ public class Player : Entity
 		{
 			case Class.Warrior:
 				Attack = 4;
-				HP = 200;
+				HP = 20;
 				break;
 
 			case Class.Mage:
 				Attack = 3;
-				HP = 150;
+				HP = 15;
 				Moves.Add(Move.Index.Fireball); // extra attack
 				break;
 

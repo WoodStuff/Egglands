@@ -31,7 +31,14 @@ public static class Game
 		if (Player.Class == Class.Unspecified)
 			throw new InvalidOperationException("An error happened while selecting a class.");
 
-		Battle.Start(Enemy.Index.Zombie);
+		option = Control.Options(["Fight Zombie", "Fight Skeleton"]);
+		Enemy enemy = option switch
+		{
+			0 => Enemy.Index.Zombie,
+			1 => Enemy.Index.Skeleton,
+			_ => throw new InvalidOperationException()
+		};
+		Battle.Start(enemy);
 	}
 
 	/// <summary>
@@ -52,5 +59,6 @@ public static class Game
 		};
 
 		Player.InitializePlayerStats(c);
+		Console.Clear();
 	}
 }
