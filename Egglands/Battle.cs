@@ -19,7 +19,7 @@ public static class Battle
 		RenderUI();
 
 		int moveID = 0;
-		do
+		do // battle turns until one of the sides is dead
 		{
 			moveID = Control.Options(Player.GetMoveNames(), moveID); // keep selected move between turns
 			Move move = Player.Moves[moveID];
